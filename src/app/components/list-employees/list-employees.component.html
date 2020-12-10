@@ -1,0 +1,44 @@
+<div>
+    <h3 class="h4 text-primary text-center" style="margin-top: 34px;">Employee Details  !</h3>
+    <table class="table hover shadow-lg p-2 mb-8 bg-white rounded">
+        <thead>
+          <tr class="btn-info">
+            <th scope="col">Sno.</th>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Category Id</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Is available</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Reviews</th>
+            <th scope="col">Vendor Name</th>
+            <th scope="col">Warranty</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of allEmp;index as i">
+            <th scope="row">{{i+1}}</th>
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.category_id}}</td>
+            <td>{{emp.description}}</td>
+            <td>{{emp.price}}</td>
+            <td>{{emp.is_available}}</td>
+            <td>{{emp.rating}}</td>
+            <td>{{emp.reviews}}</td>
+            <td>{{emp.vendor_name}}</td>
+            <td>{{emp.warranty}}</td>
+            <!-- <td> 
+              <button class="btn btn-danger" (click)="onDelete(emp.id)">Delete</button>
+            </td>
+            <td> 
+              <button class="btn btn-primary" (click)="onEmpDetails(emp.id)">Employee Details</button>
+           </td> -->
+         
+          </tr>
+         
+        </tbody>
+      </table>
+</div>
